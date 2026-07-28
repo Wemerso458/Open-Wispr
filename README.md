@@ -8,6 +8,36 @@ per hour instead of a subscription.
 A menu-bar app in plain Swift: no Electron, no account, no telemetry, no server
 of ours anywhere in the path.
 
+## Why Open-Wispr
+
+- **Sharper than a local model.** Dictation apps that run entirely on your Mac
+  are limited to whatever a laptop can fit in memory. Open-Wispr calls
+  full-size transcription models, so names, jargon and accents survive — with no
+  fans spinning up and no gigabytes of model files on disk.
+- **It learns from you.** Fix a word right after it lands and that fix is
+  remembered — the next time you say it, it comes out right by itself. No
+  training, no setup; just correct it once.
+- **No “um”, no “uh”, no stutters.** Filler words, false starts and repeated
+  words are stripped before the text is pasted, so what lands is what you meant
+  to say — not a transcript of you thinking out loud.
+- **Free forever, and open source.** MIT licensed, no subscription, no account,
+  no paid tier waiting for you. You bring your own
+  [OpenRouter](https://openrouter.ai) key and pay them cents per hour of
+  dictation, directly, at cost.
+- **Private by default.** Your key never leaves your Mac, your transcripts and
+  dictionary stay in `~/.config/openwispr`, and there is no analytics of any kind.
+
+## Quickstart
+
+1. Download the DMG from [Releases](https://github.com/soorower/Open-Wispr/releases),
+   drag Open-Wispr to Applications, then **right-click → Open** the first time.
+2. Paste your [OpenRouter key](https://openrouter.ai/keys) in Settings →
+   **Transcription** → Save.
+3. System Settings → Keyboard → **“Press 🌐 key to” → “Do Nothing”**, and grant
+   Accessibility, Input Monitoring and Microphone when asked.
+4. **Hold fn, talk, let go.** The text types itself wherever your cursor is.
+   (Or tap fn once to go hands-free, tap again to finish.)
+
 ## Install (macOS 13 or newer)
 
 1. Download the latest `Open-Wispr-x.y.dmg` from
