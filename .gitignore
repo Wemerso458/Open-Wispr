@@ -1,0 +1,23 @@
+# Build output
+Open-Wispr.app/
+AppIcon.icns
+AppIcon.iconset/
+build/
+dist/
+*.dmg
+
+# Secrets and local credentials — never commit these
+.env
+.env.*
+*.p12
+*.pem
+*.key
+*.cer
+*.certSigningRequest
+*.provisionprofile
+*.mobileprovision
+
+# Scratch
+*.wav
+*.aiff
+.DS_Store
