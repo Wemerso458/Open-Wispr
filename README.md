@@ -30,7 +30,9 @@ of ours anywhere in the path.
 ## Quickstart
 
 1. Download the DMG from [Releases](https://github.com/soorower/Open-Wispr/releases),
-   drag Open-Wispr to Applications, then **right-click → Open** the first time.
+   drag Open-Wispr to Applications, then run
+   `xattr -dr com.apple.quarantine /Applications/Open-Wispr.app` once (see
+   [below](#the-apple-could-not-verify-warning) — it isn't notarised).
 2. Paste your [OpenRouter key](https://openrouter.ai/keys) in Settings →
    **Transcription** → Save.
 3. System Settings → Keyboard → **“Press 🌐 key to” → “Do Nothing”**, and grant
@@ -43,10 +45,7 @@ of ours anywhere in the path.
 1. Download the latest `Open-Wispr-x.y.dmg` from
    [Releases](https://github.com/soorower/Open-Wispr/releases).
 2. Open it and drag **Open-Wispr** onto **Applications**.
-3. The app is signed but not notarised by Apple, so the first launch needs one
-   extra step: in Applications, **right-click Open-Wispr → Open → Open**.
-   If macOS still refuses ("damaged", "cannot be opened"), run this once and
-   launch normally:
+3. Clear Gatekeeper once — see [the warning below](#the-apple-could-not-verify-warning):
 
    ```sh
    xattr -dr com.apple.quarantine /Applications/Open-Wispr.app
@@ -66,6 +65,33 @@ of ours anywhere in the path.
 
 *Clean up speech* and *Learn my corrections* are on out of the box; both can be
 switched off in Settings or from the menu-bar icon.
+
+### The “Apple could not verify” warning
+
+> **“Open-Wispr” Not Opened** — Apple could not verify “Open-Wispr” is free of
+> malware that may harm your Mac or compromise your privacy.
+
+Every app that isn't **notarised** by Apple gets this, and notarising requires a
+paid Apple Developer account. It is Gatekeeper saying *unknown developer* — not
+a malware finding. Clear it once, whichever way you prefer:
+
+**Terminal (fastest):**
+
+```sh
+xattr -dr com.apple.quarantine /Applications/Open-Wispr.app
+```
+
+**No Terminal:** double-click Open-Wispr, press **Done** on the warning, then
+System Settings → **Privacy & Security** → scroll to **Security** → **Open
+Anyway** → confirm with Touch ID. The button only appears for a short while
+after the block, so do it right away.
+
+Right-clicking the app and choosing *Open* used to work — **Apple removed that
+shortcut in macOS 15**, so on current macOS use one of the two above.
+
+Trust nothing and verify instead: this whole app is a few thousand lines of
+Swift in this repo. Clone it, read it, `./build.sh` — macOS never warns about
+software you compiled yourself.
 
 ## Using it
 

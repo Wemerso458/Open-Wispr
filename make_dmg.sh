@@ -55,14 +55,31 @@ Open-Wispr — hold fn, speak, and your words are typed wherever the cursor is.
 
 INSTALL
   1. Drag Open-Wispr onto the Applications folder in this window.
-  2. Open-Wispr is signed but not notarised by Apple, so the first launch needs
-     one extra step: open Applications in Finder, RIGHT-CLICK Open-Wispr,
-     choose "Open", then "Open" again in the dialog. You only do this once.
+  2. Open-Wispr is open source and signed, but it is not notarised by Apple
+     (that needs a paid Apple Developer account), so macOS blocks the first
+     launch with:
 
-     If macOS still refuses ("damaged" / "cannot be opened"), run this in
-     Terminal once, then launch normally:
+         "Apple could not verify Open-Wispr is free of malware..."
+
+     That is Gatekeeper saying "unknown developer", not a virus report. Clear
+     it once, either way:
+
+     FASTEST — paste this in Terminal, then open the app normally:
 
          xattr -dr com.apple.quarantine /Applications/Open-Wispr.app
+
+     NO TERMINAL — double-click Open-Wispr and press "Done" on the warning,
+     then go to System Settings -> Privacy & Security, scroll to Security,
+     and press "Open Anyway" next to Open-Wispr. Confirm with Touch ID or
+     your password. (The button only shows for a while after the block, so
+     do it right after the warning.)
+
+     On macOS 15 and newer, right-clicking the app and choosing "Open" no
+     longer works — Apple removed that shortcut. Use one of the two above.
+
+     Prefer to verify it yourself? The whole app is ~2,500 lines of Swift at
+     github.com/soorower/Open-Wispr — clone it and run ./build.sh, and macOS
+     never complains because you compiled it.
 
 FIRST RUN
   3. The settings window opens. Paste your own OpenRouter API key under
