@@ -61,18 +61,20 @@ INSTALL
 
          "Apple could not verify Open-Wispr is free of malware..."
 
-     That is Gatekeeper saying "unknown developer", not a virus report. Clear
-     it once, either way:
+     That is Gatekeeper saying "unknown developer", not a virus report. You
+     allow it once and never see it again.
 
-     FASTEST — paste this in Terminal, then open the app normally:
+     NO TERMINAL NEEDED — four clicks:
+       a. Double-click Open-Wispr, then press "Done" on the warning.
+       b. Open System Settings -> Privacy & Security, scroll down to
+          Security. It says: "Open-Wispr" was blocked to protect your Mac.
+       c. Click "Open Anyway", confirm with Touch ID or your password.
+       d. Click "Open Anyway" once more when the app relaunches.
+       Do step b right after step a — the button only stays about an hour.
+
+     PREFER TERMINAL? One line does the same thing:
 
          xattr -dr com.apple.quarantine /Applications/Open-Wispr.app
-
-     NO TERMINAL — double-click Open-Wispr and press "Done" on the warning,
-     then go to System Settings -> Privacy & Security, scroll to Security,
-     and press "Open Anyway" next to Open-Wispr. Confirm with Touch ID or
-     your password. (The button only shows for a while after the block, so
-     do it right after the warning.)
 
      On macOS 15 and newer, right-clicking the app and choosing "Open" no
      longer works — Apple removed that shortcut. Use one of the two above.
